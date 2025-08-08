@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-
         Log.d("LIFECYCLE", "MainActivity - onCreate")
 
         drawerLayout = findViewById(R.id.drawer_layout)
