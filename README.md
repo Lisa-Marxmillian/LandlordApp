@@ -12,6 +12,7 @@ Add a TextView to display the counter using Data Binding:
 <img width="679" height="202" alt="image" src="https://github.com/user-attachments/assets/c2e2c757-816d-46d4-a45e-f4137148536f" />
 
 
+
 _tenantCount: Tracks the count internally (MutableLiveData).
 
 tenantCount: Exposes the count to the UI as read-only LiveData.
@@ -19,3 +20,6 @@ tenantCount: Exposes the count to the UI as read-only LiveData.
 addTenant(): Updates both the tenant info string and increments the counter.
 
 XML Binding: The TextView dynamically updates when tenantCount changes, thanks to LiveData + Data Binding.    
+
+
+Implemented a tenant counter in TenantViewModel using LiveData. The counter increments when addTenant() is called and binds to a TextView via Data Binding. The UI updates reactively without manual intervention.
