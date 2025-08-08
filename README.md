@@ -2,6 +2,7 @@
 
 **1. Extend the TenantViewModel**
 Add a MutableLiveData counter to track the number of tenants and expose it as LiveData:
+
 class TenantViewModel : ViewModel()
 {
     private val _tenantInfo = MutableLiveData<String>("")
@@ -19,6 +20,7 @@ class TenantViewModel : ViewModel()
 
 **2. Update the XML Layout**
 Add a TextView to display the counter using Data Binding:
+
 <TextView
     android:id="@+id/tvTenantCount"
     android:layout_width="wrap_content"
@@ -28,6 +30,9 @@ Add a TextView to display the counter using Data Binding:
     app:layout_constraintStart_toStartOf="parent" />
 
 _tenantCount: Tracks the count internally (MutableLiveData).
+
 tenantCount: Exposes the count to the UI as read-only LiveData.
+
 addTenant(): Updates both the tenant info string and increments the counter.
+
 XML Binding: The TextView dynamically updates when tenantCount changes, thanks to LiveData + Data Binding.    
